@@ -1,5 +1,8 @@
 env/
-input/
-output/
-xml/
+input/*.png
+input/*.jpg
+output/*.png
+output/*.jpg
+xml/*.xml
 util/__pycache__/
+.vscode/

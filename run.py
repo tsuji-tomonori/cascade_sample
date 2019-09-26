@@ -6,11 +6,12 @@ from util import workdir, detect
 
 CASCADE_NAME = "lbpcascade_animeface.xml"
 MODE = 1
+SUFFIX = [".jpg", ".png"]
 
 # set path
 workdir = workdir.workdir()
 read_dir = workdir / "input"
-read_file_names = [x.name for x in read_dir.iterdir()]
+read_file_names = [x.name for x in read_dir.iterdir() if x.suffix in SUFFIX]
 read_pathes = [read_dir / name for name in read_file_names]
 write_dir = workdir / "output"
 write_pathes = [write_dir / name for name in read_file_names]
