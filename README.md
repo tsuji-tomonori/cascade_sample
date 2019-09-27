@@ -1,5 +1,21 @@
 # cascade_sample
 
+## quick start
+
+```bash
+git clone https://github.com/tsuji-tomonori/cascade_sample.git
+cd cascade_sample/xml
+wget https://raw.githubusercontent.com/nagadomi/lbpcascade_animeface/master/lbpcascade_animeface.xml
+cd ../
+pip install -r requirements.txt
+# 検出対象の画像を input フォルダーに入れる
+python run.py
+```
+
+## 使用方法
+
+pass
+
 ## xml url
 
 * [キャラクターの顔](https://github.com/nagadomi/lbpcascade_animeface)
@@ -19,10 +35,3 @@ pip install -r requirements.txt
 | Python        | 3.7.1    |
 | numpy         | 1.17.2   |
 | opencv-python | 4.1.1.26 |
-
-## quick start
-
-```
-python run.py
-```
-
