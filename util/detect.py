@@ -22,3 +22,13 @@ def draw_bounding_box(img, positions):
     for x, y, w, h in positions:
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
     return img
+
+def zoom_out(positions, scale=1.5):
+    ret_position = []
+    for x, y, w, h in positions:
+        w_new = int(w * scale)
+        h_new = int(h * scale)
+        x = max(0, int(x - ((w_new - w) / 2)))
+        y = max(0, int(y - ((h_new - h) / 2)))
+        ret_position.append((x, y, w_new, h_new))
+    return ret_position
