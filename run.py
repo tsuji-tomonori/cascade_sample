@@ -26,10 +26,8 @@ for read, write in zip(read_pathes, write_pathes):
     img = cv2.imread(str(read), cv2.IMREAD_COLOR)
     # detect
     positions = detect.detect(img, cascade)
-    print("b", positions)
     # zoom out
-    positions = detect.zoom_out(positions, scale=1.5)
-    print("a", positions)
+    #positions = detect.zoom_out(positions, scale=1.5)
     # output
     # cut
     if MODE == 0:
